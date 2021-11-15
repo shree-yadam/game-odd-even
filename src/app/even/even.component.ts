@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class EvenComponent implements OnInit {
 
-  @Input() counter: number;
+  @Input('evenNumber') counter: number;
 
   constructor() { }
 
