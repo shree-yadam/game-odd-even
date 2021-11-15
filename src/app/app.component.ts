@@ -10,7 +10,7 @@ export class AppComponent {
 
   gameCountArray: number[] = [];
 
-  onGameNumberChanged(gameData: {gameCounter: number}){
-    this.gameCountArray.push(gameData.gameCounter);
+  onGameNumberChanged(gameCounter: number){
+    this.gameCountArray.push(gameCounter);
   }
 }
