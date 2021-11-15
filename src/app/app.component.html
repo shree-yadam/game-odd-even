@@ -1,3 +1,9 @@
 <app-game-control (gameNumberChanged)="onGameNumberChanged($event)"></app-game-control>
-<app-odd></app-odd>
-<app-even></app-even>
+<div *ngFor="let element of gameCountArray">
+  <div *ngIf="element % 2 === 0">
+    <app-even [counter]="element"></app-even>
+  </div>
+  <div *ngIf="element % 2 !== 0">
+    <app-odd [counter]="element"></app-odd>
+  </div>
+</div>

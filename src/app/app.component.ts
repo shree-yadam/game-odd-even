@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  gameCountArray: number[] = [];
+
   onGameNumberChanged(gameData: {gameCounter: number}){
     console.log("Game Counter: ", gameData.gameCounter);
-
+    this.gameCountArray.push(gameData.gameCounter);
   }
 }
