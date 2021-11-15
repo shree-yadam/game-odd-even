@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameControlComponent implements OnInit {
 
+  gameIntervalTimer;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onGameStart() {
+    console.log("Game Started");
+    this.gameIntervalTimer = setInterval(() => {
+      console.log("Timer triggered")
+    }, 1000);
+  }
+
+  onGameStop() {
+    console.log("Timer cleared")
+    clearInterval(this.gameIntervalTimer);
   }
 
 }
